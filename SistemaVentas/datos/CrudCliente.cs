@@ -10,7 +10,7 @@ namespace SistemaVentas.datos
 {
     class CrudCliente:conexionbd
     {
-        public void NuevoCli(Cliente cliente)
+       public void NuevoCli(Cliente cliente)
         {
             string SQL = "Insert into Cliente(dni, Nombre, Apellido, Direccion, Telefono) VALUES ('" + cliente.Dni
                 + "', '" + cliente.Nombre + "', '" + cliente.Apellido + "', '" + cliente.Direccion + "', '" + cliente.Telefono  + "');";

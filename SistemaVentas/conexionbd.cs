@@ -7,7 +7,7 @@ using SistemaVentas.models;
 
 public class conexionbd
 {
-    private SqlConnection conec = new SqlConnection();
+   private SqlConnection conec = new SqlConnection();
     private SqlCommand cmd=new SqlCommand();
     private SqlDataAdapter adapter = new SqlDataAdapter();
 
