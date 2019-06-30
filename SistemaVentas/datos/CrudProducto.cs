@@ -22,8 +22,8 @@ namespace SistemaVentas.datos
 
         public void NuevoPro(Producto producto)
         {
-            string SQL = "Insert into Producto(id_producto, Marca, Precio, Stock, Talla, Categoria, id_proveedor) VALUES ('" + producto.IdProducto 
-                + "', '" + producto.Marca + "', '" + producto.Precio + "', '" + producto.Stock + "', '" + producto.Talla + "', '" + producto.Categoria 
+            string SQL = "Insert into Producto(id_producto, Marca, Precio, Stock, Categoria, id_proveedor) VALUES ('" + producto.IdProducto 
+                + "', '" + producto.Marca + "', '" + producto.Precio + "', '" + producto.Stock  + "', '" + producto.Categoria 
                 + "','" + producto.Proveedor + "');";
             this.execute(SQL);
             this.desconectar();
@@ -39,8 +39,8 @@ namespace SistemaVentas.datos
 
         public void EditarPro(Producto producto)
         {
-            string SQL = "update Producto set Marca= '" + producto.Marca + "',Precio = " + producto.Precio 
-                + ",Stock = " + producto.Stock + ",Talla = " + producto.Talla + ",Categoria = " + producto.Categoria 
+            string SQL = "update Producto set Marca = '" + producto.Marca + "',Precio = " + producto.Precio 
+                + ",Stock = " + producto.Stock + ",Categoria = " + producto.Categoria 
                 + " where id_producto = '" + producto.IdProducto+"';";
             this.execute(SQL);
             this.desconectar();

@@ -72,29 +72,20 @@ namespace SistemaVentas.views
 
         private void button3_Click(object sender, EventArgs e)
         {
+            //SELECCIONAR CLIENTE DE DATA GRID
+
             panelBuscarCliente.Visible = false;
+            
         }
 
         private void btnRegisCliente_Click(object sender, EventArgs e)
         {
-            if (textDNICli.Text != "" && textNomCli.Text != "" && textApeCli.Text != "" && textDirecCli.Text != "" && textFonoCli.Text != "")
-            {
-                Cliente cliente = new Cliente();
-                cliente.Dni = textDNICli.Text;
-                cliente.Nombre = textNomCli.Text;
-                cliente.Apellido = textApeCli.Text;
-                cliente.Direccion = textDirecCli.Text;
-                cliente.Telefono = textFonoCli.Text;
-                crudClient.NuevoCli(cliente);
-            }
-            else
-            {
-                MessageBox.Show("Complete los campos", "Producto Nuevo");
-            }
+            //mostrar Frm cliente
         }
 
         private void btnBuscarCliente_Click(object sender, EventArgs e)
         {
+            panelBuscarCliente.Visible = true;
             DataTable table = new DataTable();
             table = crudClient.BuscarCli(txtCliente.Text);
             if (table.Rows.Count > 0)

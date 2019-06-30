@@ -51,11 +51,11 @@ namespace SistemaVentas.views
                 string codigo = textBox1.Text;
                 double precio = double.Parse(textBox2.Text);
                 int stock = int.Parse(textBox3.Text);
-                int talla = int.Parse(comboBox3.Text);
+              
                 string marca = comboBox2.Text;
                 string categoria = comboBox4.Text;
                 string proveedor = comboBox1.Text;
-                Producto tempProd = new Producto(codigo, precio, stock, talla, marca, categoria, proveedor);
+                Producto tempProd = new Producto(codigo, precio, stock, marca, categoria, proveedor);
 
                 crudProduct.NuevoPro(tempProd);
                 panelNuevoProducto.Visible = false;
@@ -126,7 +126,7 @@ namespace SistemaVentas.views
                 newProduc.Marca = row.Cells[1].Value.ToString();
                 newProduc.Precio = double.Parse(row.Cells[2].Value.ToString());
                 newProduc.Stock = int.Parse(row.Cells[3].Value.ToString());
-                newProduc.Talla = int.Parse(row.Cells[4].Value.ToString());
+               
                 newProduc.Categoria = row.Cells[5].Value.ToString();
                 //newProduc.Proveedor = row.Cells[6].Value.ToString();
             }
@@ -134,7 +134,7 @@ namespace SistemaVentas.views
             textBox1.Text = newProduc.IdProducto;
             textBox2.Text = newProduc.Precio.ToString();
             textBox3.Text = newProduc.Stock.ToString();
-            comboBox3.Text = newProduc.Talla.ToString();
+            
             comboBox2.Text = newProduc.Marca;
             comboBox4.Text = newProduc.Categoria;
             //comboBox1.Text = newProduc.Proveedor;
